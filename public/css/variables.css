@@ -1,0 +1,61 @@
+/**
+ * CSS değişkenleri ve temel reset.
+ * Tüm renk, gölge ve tipografi token'ları burada tanımlanır.
+ */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* Renk paleti */
+  --color-primary: #0e5aa7;
+  --color-primary-dark: #0a3d74;
+  --color-accent: #e4572e;
+  --color-success: #1f9d68;
+  --color-warning: #d97706;
+  --color-info: #2b8ac6;
+
+  /* Yüzey renkleri */
+  --color-bg: #edf4fb;
+  --color-bg-deep: #dfeaf8;
+  --color-surface: rgba(255, 255, 255, 0.88);
+  --color-surface-strong: #ffffff;
+  --color-text: #17324d;
+  --color-text-muted: #5f7183;
+  --color-border: rgba(23, 50, 77, 0.12);
+
+  /* Gölge ve köşe */
+  --shadow-sm: 0 8px 24px rgba(15, 36, 64, 0.08);
+  --shadow-md: 0 18px 40px rgba(15, 36, 64, 0.12);
+  --shadow-lg: 0 28px 56px rgba(15, 36, 64, 0.18);
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+
+  /* Geçiş süreleri */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+}
+
+body {
+  font-family: 'Manrope', 'Segoe UI', sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(43, 138, 198, 0.18), transparent 35%),
+    radial-gradient(circle at top right, rgba(228, 87, 46, 0.14), transparent 32%),
+    linear-gradient(180deg, #f8fbff 0%, var(--color-bg) 100%);
+  color: var(--color-text);
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}

@@ -1,0 +1,1463 @@
+{
+  "source": "https://kocaeli.afad.gov.tr/kocaeli-ili-gecici-barinma-merkezleri-ve-toplanma-alanlari",
+  "generatedAt": "2026-07-02T22:19:28.109Z",
+  "districts": [
+    {
+      "district": "Başiskele",
+      "neighborhoods": [
+        {
+          "name": "Altınkent",
+          "streets": [
+            "29 EKİM CAD."
+          ]
+        },
+        {
+          "name": "Atakent",
+          "streets": [
+            "ZÜBEYDE HANIM CAD."
+          ]
+        },
+        {
+          "name": "Aydınkent",
+          "streets": [
+            "EŞREF BİTLİS CAD."
+          ]
+        },
+        {
+          "name": "Barbaros",
+          "streets": [
+            "TURGUT ÖZAL CAD.",
+            "YUNUS EMRE CAD.- BEYAZIT CAD."
+          ]
+        },
+        {
+          "name": "Damlar",
+          "streets": [
+            "HACI ASLAN CAD.",
+            "MAHMUT ÇAVUŞ CAD."
+          ]
+        },
+        {
+          "name": "Fatih",
+          "streets": [
+            "BAHTİYAR SOK."
+          ]
+        },
+        {
+          "name": "Karadenizliler",
+          "streets": [
+            "YONCALI SOK."
+          ]
+        },
+        {
+          "name": "Kılıçarslan",
+          "streets": [
+            "DÜZLÜK CAD."
+          ]
+        },
+        {
+          "name": "Kılıçaslan",
+          "streets": [
+            "ZEYNEP ULTAV SOK."
+          ]
+        },
+        {
+          "name": "Körfez",
+          "streets": [
+            "D-130 KARAYOLU CAD."
+          ]
+        },
+        {
+          "name": "Kullar Yakacık",
+          "streets": [
+            "ÖZEN SOK."
+          ]
+        },
+        {
+          "name": "Kullar Yaylacık",
+          "streets": [
+            "KARAMÜRSEL CAD."
+          ]
+        },
+        {
+          "name": "Mehmetağa",
+          "streets": [
+            "KARAMÜRSEL CAD."
+          ]
+        },
+        {
+          "name": "Ovacık",
+          "streets": [
+            "YENİ YOL CAD."
+          ]
+        },
+        {
+          "name": "Paşadağ",
+          "streets": [
+            "SAĞLIK SOK."
+          ]
+        },
+        {
+          "name": "Paşadağı",
+          "streets": [
+            "NURİ PAŞA CAD."
+          ]
+        },
+        {
+          "name": "Sepetlipınar",
+          "streets": [
+            "EGEMEN CAD."
+          ]
+        },
+        {
+          "name": "Serdar",
+          "streets": [
+            "EMİR SULTAN CAD. - İSMAİL GAZİ SOK.",
+            "Ş.GAFFAR OKKAN CAD."
+          ]
+        },
+        {
+          "name": "Seymen",
+          "streets": [
+            "D-130 KARAYOLU CAD.",
+            "GÜLBAHAR HATUN CAD.",
+            "GÜNAYDIN CAD."
+          ]
+        },
+        {
+          "name": "Yeniköy Merkez",
+          "streets": [
+            "CEVİZLİK CAD.",
+            "VATAN CAD."
+          ]
+        },
+        {
+          "name": "Yeşilkent",
+          "streets": [
+            "MANZARA CAD."
+          ]
+        },
+        {
+          "name": "Yeşilyurt",
+          "streets": [
+            "ARAS SOK.",
+            "LEVENT KIRCA CAD."
+          ]
+        },
+        {
+          "name": "Yuvacık Yakacık",
+          "streets": [
+            "HACI MAHMUT CAD."
+          ]
+        }
+      ]
+    },
+    {
+      "district": "Çayırova",
+      "neighborhoods": [
+        {
+          "name": "Akse",
+          "streets": [
+            "471 SOK.",
+            "RAHMİ DİBEK CAD."
+          ]
+        },
+        {
+          "name": "Atatürk",
+          "streets": [
+            "303 SOK.",
+            "368 SOK."
+          ]
+        },
+        {
+          "name": "Cumhuriyet",
+          "streets": []
+        },
+        {
+          "name": "Çayırova",
+          "streets": []
+        },
+        {
+          "name": "Emek",
+          "streets": [
+            "13/1 SOK.",
+            "45 SOK.",
+            "54 SOK.",
+            "62 SOK.",
+            "64 SOK."
+          ]
+        },
+        {
+          "name": "İnönü",
+          "streets": [
+            "123 SOK.",
+            "124 SOK.",
+            "172 SOK."
+          ]
+        },
+        {
+          "name": "Özgürlük",
+          "streets": [
+            "222 SOK.",
+            "240 SOK.",
+            "265 SOK.",
+            "RAHMİ DİBEK CAD."
+          ]
+        },
+        {
+          "name": "Şekerpınar",
+          "streets": []
+        },
+        {
+          "name": "Yenimahalle",
+          "streets": [
+            "SÜLEYMANİYE CAD."
+          ]
+        }
+      ]
+    },
+    {
+      "district": "Darıca",
+      "neighborhoods": [
+        {
+          "name": "A.ipekçi",
+          "streets": [
+            "1530 SOK.",
+            "İSTASYON CAD 1548 SOK."
+          ]
+        },
+        {
+          "name": "Bağlarbaşı",
+          "streets": [
+            "KASIMPATI SOK.",
+            "SELANİK SOK.",
+            "SEYRAN SOK.",
+            "TELSİZ SOK.- GÜNER SOK."
+          ]
+        },
+        {
+          "name": "Bayramoğlu",
+          "streets": [
+            "İLBEYİ SOK.",
+            "NALAN SOK.",
+            "TÜRKAN SOK."
+          ]
+        },
+        {
+          "name": "Cami",
+          "streets": [
+            "BUĞRA SOK.",
+            "KAPLAN CAD.GÜVENLİ SOK.",
+            "KARAASLAN CAD."
+          ]
+        },
+        {
+          "name": "Emek",
+          "streets": [
+            "F.SULTAN MEHMET CAD.",
+            "KEMAL PAŞA CAD."
+          ]
+        },
+        {
+          "name": "Fevzi Çakmak",
+          "streets": [
+            "DOLUNAY SOK.",
+            "İMSAK SOK.",
+            "İSTASYON CAD POYRAZ SOK.",
+            "KÖŞK SOK."
+          ]
+        },
+        {
+          "name": "Kazım Karabekir",
+          "streets": [
+            "AYDIN-NURAY-BARIŞSEVER SOK.",
+            "DİNAMİT SOK.",
+            "MEVLANA CAD.",
+            "ORUÇ REİS CAD.",
+            "Ş.GAFFAR OKKAN CAD.",
+            "YENİ DEVİR SOK."
+          ]
+        },
+        {
+          "name": "Nenehatun",
+          "streets": [
+            "ÇİLEK SOK.",
+            "DOĞUKAN SOK.",
+            "LOKMAN HEKİM CAD.",
+            "OĞUZHAN SOK."
+          ]
+        },
+        {
+          "name": "Osmangazi",
+          "streets": [
+            "DAĞARCIK SOK.",
+            "LOKMAN HEKİM CAD.",
+            "MORAL SOK.",
+            "ÖZNUR SOK."
+          ]
+        },
+        {
+          "name": "Pirireis",
+          "streets": [
+            "BARBAROS CAD.",
+            "MENDERES SOK.",
+            "ZAKKUM SOK."
+          ]
+        },
+        {
+          "name": "Sırasöğütler",
+          "streets": [
+            "1634/1 SOK.",
+            "AYDINLAR CAD.",
+            "SIRASÖĞÜTLER CAD."
+          ]
+        },
+        {
+          "name": "Yalı-yeni-zincirlikuyu",
+          "streets": [
+            "KAHVECİLER SOK.",
+            "YALI MAH. İSTASYON CAD."
+          ]
+        }
+      ]
+    },
+    {
+      "district": "Derince",
+      "neighborhoods": [
+        {
+          "name": "Çenedağ",
+          "streets": [
+            "ALİM SOK.",
+            "KOLORDU CAD.",
+            "TEZLER SOK."
+          ]
+        },
+        {
+          "name": "Çınarlı",
+          "streets": [
+            "ATATÜRK CAD.",
+            "BERAT SOK.",
+            "ERTUĞRUL CAD.",
+            "GAFFAR OKKAN CAD.",
+            "KAMURAN CAD."
+          ]
+        },
+        {
+          "name": "Deniz",
+          "streets": [
+            "MEKTEP SOK."
+          ]
+        },
+        {
+          "name": "Dumlupınar",
+          "streets": [
+            "19 MAYIS SOK.",
+            "DERE SOK.",
+            "TOLGA SOK."
+          ]
+        },
+        {
+          "name": "Fatih Sultan",
+          "streets": [
+            "CANDAN SOK.",
+            "MELİK GAZİ SOK.",
+            "SERİN SOK."
+          ]
+        },
+        {
+          "name": "İbnisina",
+          "streets": [
+            "ÇAĞLAYAN SOK.",
+            "PİRİREİS CAD.",
+            "ŞAİR BAKİ SOK."
+          ]
+        },
+        {
+          "name": "Mersincik",
+          "streets": [
+            "ECE SOK.",
+            "PALMİYE SOK."
+          ]
+        },
+        {
+          "name": "Sırrıpaşa",
+          "streets": [
+            "ÇENEDERE CAD.",
+            "PAK SOK.",
+            "SEFER SOK."
+          ]
+        },
+        {
+          "name": "Yavuz Sultan",
+          "streets": [
+            "ÖZDİL SOK."
+          ]
+        },
+        {
+          "name": "Yenikent",
+          "streets": [
+            "BARIŞ MANÇO SOK.",
+            "DİDEM SOK.",
+            "PEHLİVAN SOK."
+          ]
+        }
+      ]
+    },
+    {
+      "district": "Dilovası",
+      "neighborhoods": [
+        {
+          "name": "Dilisok.elesi",
+          "streets": [
+            "708.SOK.",
+            "CUMHURİYET CAD.",
+            "SAİD-İ NURSİ CAD."
+          ]
+        },
+        {
+          "name": "Mimar Sinan",
+          "streets": [
+            "557/2 SOK.",
+            "İSTİKLAL CAD."
+          ]
+        },
+        {
+          "name": "Orhangazi",
+          "streets": [
+            "224 SOK.",
+            "251.SOK.",
+            "İBNİ SİNA CAD."
+          ]
+        },
+        {
+          "name": "Tavşancıl",
+          "streets": [
+            "YÜKSEK SOK."
+          ]
+        }
+      ]
+    },
+    {
+      "district": "Gebze",
+      "neighborhoods": [
+        {
+          "name": "Arapçeşme",
+          "streets": [
+            "1023.SOK.",
+            "1044/3.SOK."
+          ]
+        },
+        {
+          "name": "Barış",
+          "streets": [
+            "1826/2 SOK.",
+            "1851.SOK.",
+            "1856.SOK.",
+            "HAYRİ MACAR CAD."
+          ]
+        },
+        {
+          "name": "Beylikbağı",
+          "streets": [
+            "324.SOK.",
+            "327/4.SOK.",
+            "İSTANBUL CAD."
+          ]
+        },
+        {
+          "name": "Cumhuriyet",
+          "streets": [
+            "2228.SOK.",
+            "2231/1 SOK."
+          ]
+        },
+        {
+          "name": "Gaziler",
+          "streets": [
+            "1750.SOK.",
+            "1759.SOK.",
+            "1789/1 SOK."
+          ]
+        },
+        {
+          "name": "Güzeller",
+          "streets": [
+            "960.SOK.",
+            "BAHAR CAD."
+          ]
+        },
+        {
+          "name": "Hacihalil",
+          "streets": [
+            "Şht.Numan DEDE CAD."
+          ]
+        },
+        {
+          "name": "İnönü",
+          "streets": [
+            "1022/2 SOK.",
+            "1964.SOK.",
+            "1996. SOK. 1",
+            "İBRAHİM AĞA CAD.",
+            "PEK ÇALIŞKAN CAD."
+          ]
+        },
+        {
+          "name": "Köklüçeşme",
+          "streets": [
+            "536.SOK."
+          ]
+        },
+        {
+          "name": "Köşklüçeşme",
+          "streets": [
+            "530/2.SOK.",
+            "560.SOK.",
+            "573/1 SOK.",
+            "Yeni Bağdat CAD.."
+          ]
+        },
+        {
+          "name": "Mevlana",
+          "streets": [
+            "ISSIKGÖL CAD.",
+            "YUNUS EMRE CAD."
+          ]
+        },
+        {
+          "name": "Mimar Sinan",
+          "streets": [
+            "MİMAR SİNAN CAD."
+          ]
+        },
+        {
+          "name": "Osman Yılmaz",
+          "streets": [
+            "İSTANBUL CAD."
+          ]
+        },
+        {
+          "name": "Sultanorhan",
+          "streets": [
+            "1158/2. SOK. 2",
+            "İLYAS BEY CAD.",
+            "TERMİNAL CAD."
+          ]
+        },
+        {
+          "name": "Tatlıkuyu",
+          "streets": [
+            "1319.SOK."
+          ]
+        },
+        {
+          "name": "Tatlıkuyu Ve Barış Mah.ortası",
+          "streets": [
+            "1180/1 . SOK."
+          ]
+        },
+        {
+          "name": "Ulus",
+          "streets": [
+            "2140/1 SOK.",
+            "TOPAL OSMAN AĞA CAD."
+          ]
+        },
+        {
+          "name": "Yenikent",
+          "streets": [
+            "2483. SOK.",
+            "DİCLE CAD."
+          ]
+        }
+      ]
+    },
+    {
+      "district": "Gölcük",
+      "neighborhoods": [
+        {
+          "name": "Atatürk",
+          "streets": [
+            "3039. SOK.-ÖMER ÇAVUŞ SOK.",
+            "ATMACA SOK.",
+            "RIFAT ILGAZ CAD.",
+            "SABİHA GÖKÇEN CAD.",
+            "SARI CAD.",
+            "SOLAKOĞLU SOK."
+          ]
+        },
+        {
+          "name": "Cumhuriyet",
+          "streets": [
+            "AHMET YESEVİ CAD.",
+            "CAMİNİN YANI"
+          ]
+        },
+        {
+          "name": "Çiftlik",
+          "streets": [
+            "4118 SOK.",
+            "4430 SOK.",
+            "BAHÇE KAPILAR CAD. 4047. SOK.",
+            "ÇAKABEY ANA. LİSESİ YANI",
+            "NECATİ ÇELİK CAD."
+          ]
+        },
+        {
+          "name": "Değirmendere Merkez",
+          "streets": [
+            "CUMHURİYET CAD.",
+            "MİTHAT GÜRSES CAD.",
+            "SEMİH ÇELİKKOL SOK."
+          ]
+        },
+        {
+          "name": "Değirmendere Yalı",
+          "streets": [
+            "ÇAĞLA SOK."
+          ]
+        },
+        {
+          "name": "Deniz Evler",
+          "streets": [
+            "4047. SOK.",
+            "USTALAR CAD."
+          ]
+        },
+        {
+          "name": "Donanma",
+          "streets": [
+            "1195 SOK.",
+            "164. SOK.",
+            "PAZARLIDERE CAD."
+          ]
+        },
+        {
+          "name": "Dumlupınar",
+          "streets": [
+            "176. SOK."
+          ]
+        },
+        {
+          "name": "Düzağaç",
+          "streets": [
+            "700 SOK."
+          ]
+        },
+        {
+          "name": "Gölcük Merkez",
+          "streets": [
+            "GÖLCÜK MERKEZ"
+          ]
+        },
+        {
+          "name": "Gölcük Yeni",
+          "streets": [
+            "288. SOK."
+          ]
+        },
+        {
+          "name": "Halıdere",
+          "streets": [
+            "ESOK.İ BELEDİYE BİNASI ÖNÜ"
+          ]
+        },
+        {
+          "name": "İhsaniye Merkez",
+          "streets": [
+            "BAŞOĞLU CAD.",
+            "BEYOĞLU CAD.",
+            "STAD CAD."
+          ]
+        },
+        {
+          "name": "İpek Yolu",
+          "streets": [
+            "649. SOK."
+          ]
+        },
+        {
+          "name": "İpekyolu",
+          "streets": [
+            "643. SOK.",
+            "655. SOK."
+          ]
+        },
+        {
+          "name": "İpekyolu Şirinköy",
+          "streets": [
+            "CELAL BAYER CAD."
+          ]
+        },
+        {
+          "name": "Karaköprü",
+          "streets": [
+            "ÖZLEM SOK.",
+            "ŞANLI SOK."
+          ]
+        },
+        {
+          "name": "Kavaklı",
+          "streets": [
+            "112. SOK.",
+            "80. SOK.",
+            "N. KEMAL CAD."
+          ]
+        },
+        {
+          "name": "Merkez Dumlupınar",
+          "streets": [
+            "21.22. SOK. ARASI"
+          ]
+        },
+        {
+          "name": "Piyalepaşa",
+          "streets": [
+            "548. SOK.",
+            "565. SOK.",
+            "612. SOK."
+          ]
+        },
+        {
+          "name": "Saraylı",
+          "streets": [
+            "672. SOK."
+          ]
+        },
+        {
+          "name": "Şehitler",
+          "streets": [
+            "444. SOK.",
+            "LOZAN CAD."
+          ]
+        },
+        {
+          "name": "Şirinköy",
+          "streets": [
+            "672. SOK.",
+            "687. SOK.",
+            "SAKARYA CAD."
+          ]
+        },
+        {
+          "name": "Topçular",
+          "streets": [
+            "3053. SOK.",
+            "3084 SOK.",
+            "HİLMİ ÖZKÖK CAD.",
+            "SARI CAD.",
+            "SEZAİ KARAKOÇ CAD."
+          ]
+        },
+        {
+          "name": "Ulaşlı Yavuz Selim",
+          "streets": [
+            "NURİ BERMEK İ.Ö.O. YANI"
+          ]
+        },
+        {
+          "name": "Yazlık Merkez",
+          "streets": [
+            "ILICA CAD."
+          ]
+        },
+        {
+          "name": "Yazlık Yeni",
+          "streets": [
+            "BORA SOK.",
+            "FIRAT CAD.",
+            "ORHAN VELİ CAD."
+          ]
+        },
+        {
+          "name": "Yüzbaşılar",
+          "streets": [
+            "İSİMSİZ SOK."
+          ]
+        }
+      ]
+    },
+    {
+      "district": "İzmit",
+      "neighborhoods": [
+        {
+          "name": "28 Haziran",
+          "streets": [
+            "DERE SOK.",
+            "OKUL SOK."
+          ]
+        },
+        {
+          "name": "42 Evler",
+          "streets": [
+            "VALİ ŞEREF CAD."
+          ]
+        },
+        {
+          "name": "Akçakoca",
+          "streets": [
+            "DÜZ SOK.",
+            "FIRIN SOK."
+          ]
+        },
+        {
+          "name": "Alikahya Atatürk Mah. (durhasan)",
+          "streets": [
+            "HÜRRİYET CAD.",
+            "YILDIZLAR SOK."
+          ]
+        },
+        {
+          "name": "Ayazma",
+          "streets": [
+            "17 AĞUSTOS BULVARI",
+            "GEMİCİ SOK."
+          ]
+        },
+        {
+          "name": "Cedit",
+          "streets": [
+            "SEKA SOK."
+          ]
+        },
+        {
+          "name": "Cumhuriyet",
+          "streets": [
+            "MUAMMER DERELİ SOK.",
+            "SAHİL YOLU SOK.",
+            "YAYLA SOK."
+          ]
+        },
+        {
+          "name": "Çukurbağ",
+          "streets": [
+            "GEBEŞOĞLU SOK."
+          ]
+        },
+        {
+          "name": "Erenler",
+          "streets": [
+            "AKÇAKOCA KONUTLARI ALTI.",
+            "KADIRGA SOK.",
+            "YANIK SOK."
+          ]
+        },
+        {
+          "name": "Gündoğdu",
+          "streets": [
+            "KUTUP YILDIZI SOK.",
+            "MİTHAT İÇÖZ SOK."
+          ]
+        },
+        {
+          "name": "Hacıhızır",
+          "streets": [
+            "İNÖNÜ CAD."
+          ]
+        },
+        {
+          "name": "Kadıköy",
+          "streets": [
+            "GAZANFER BİLGE BULVARI",
+            "MEHTAPLI SOK."
+          ]
+        },
+        {
+          "name": "Karabaş",
+          "streets": [
+            "PERTEV PAŞA CAD."
+          ]
+        },
+        {
+          "name": "Kemalpaşa",
+          "streets": [
+            "KAPANCA SOK."
+          ]
+        },
+        {
+          "name": "Kocatepe",
+          "streets": [
+            "74.SOK."
+          ]
+        },
+        {
+          "name": "Kozluk",
+          "streets": [
+            "İNÖNÜ CAD."
+          ]
+        },
+        {
+          "name": "Körfez",
+          "streets": [
+            "ŞEHİT REMZİ CAD."
+          ]
+        },
+        {
+          "name": "Kuruçeşme Fatih",
+          "streets": [
+            "36.SOK.",
+            "MUAMMER AKSOY CAD"
+          ]
+        },
+        {
+          "name": "Malta",
+          "streets": [
+            "SELEK SOK.",
+            "YURDUM CAD."
+          ]
+        },
+        {
+          "name": "Mehmet Ali Paşa",
+          "streets": [
+            "BAĞDAT CAD.",
+            "KAVAKLAR CAD."
+          ]
+        },
+        {
+          "name": "Ömerağa",
+          "streets": [
+            "İZMİT BELEDİYESİ ÖNÜNDEKİ"
+          ]
+        },
+        {
+          "name": "Serdar",
+          "streets": [
+            "VADİ SOK."
+          ]
+        },
+        {
+          "name": "Şirintepe",
+          "streets": [
+            "BASIN SOK.",
+            "KAZIM KARABEKİR CAD."
+          ]
+        },
+        {
+          "name": "Tepecik",
+          "streets": [
+            "ACISU SOK.",
+            "HALKEVİ MEVKİ."
+          ]
+        },
+        {
+          "name": "Tepeköy",
+          "streets": [
+            "DAĞ SÜMBÜLÜ SOK.",
+            "EVLİYA SOK.",
+            "KİRAZ SOK."
+          ]
+        },
+        {
+          "name": "Topçular",
+          "streets": [
+            "ŞAMDAN SOK."
+          ]
+        },
+        {
+          "name": "Turgut",
+          "streets": [
+            "BEYAZ PAMUK SOK.",
+            "ERGUVAN SOK."
+          ]
+        },
+        {
+          "name": "Veliahmet",
+          "streets": [
+            "İNÖNÜ CAD."
+          ]
+        },
+        {
+          "name": "Yahya Kaptan",
+          "streets": [
+            "AYÇİÇEĞİ SOK.",
+            "ÇİÇEKLİ SOK.",
+            "KIZILAY SOK.",
+            "NECİP FAZIL CAD."
+          ]
+        },
+        {
+          "name": "Yeni",
+          "streets": [
+            "İNKILAP CAD",
+            "İSİMSİZ SOK."
+          ]
+        },
+        {
+          "name": "Yenidoğan",
+          "streets": [
+            "AYDINLAR SOK.",
+            "HATİPKÖY CAD.",
+            "İSMAİL ÖZEN CAD.",
+            "TARİH SOK."
+          ]
+        },
+        {
+          "name": "Yenişehir",
+          "streets": [
+            "AHMET ZİYA SOK.",
+            "ALEV SOK.",
+            "BEKİR SOK.",
+            "OVA SOK.",
+            "UĞURHAN SOK.",
+            "ULUBATLI HASAN SOK."
+          ]
+        }
+      ]
+    },
+    {
+      "district": "Kandıra",
+      "neighborhoods": [
+        {
+          "name": "Akdurak",
+          "streets": [
+            "A.VEYSEL CAD.",
+            "CUMHURİYET CAD.",
+            "ILICA CAD."
+          ]
+        },
+        {
+          "name": "Aydınlık",
+          "streets": [
+            "KAVAKDİBİ",
+            "ORTACA SOK."
+          ]
+        },
+        {
+          "name": "Çarşı",
+          "streets": [
+            "İZMİT CAD.",
+            "KARAKOL CAD."
+          ]
+        },
+        {
+          "name": "Orhan",
+          "streets": [
+            "HUDUT SOK."
+          ]
+        }
+      ]
+    },
+    {
+      "district": "Karamürsel",
+      "neighborhoods": [
+        {
+          "name": "4 Temmuz",
+          "streets": [
+            "101. CADDE",
+            "ATATÜRK CAD.",
+            "DİKDEMİR SOK.",
+            "ESKİ BELEDİYE BİNASI YANI",
+            "GAZENFER BİLGE CAD.",
+            "GAZİ SOK.",
+            "GÜREŞ ALANI YANI",
+            "KAYMAKAMLIK KRİZ MERKEZİ YANI",
+            "MESLEK OKULU YANI",
+            "NECDET CALP CAD.",
+            "SARIKUM CAD.",
+            "ZÜBEYDE HANIM CAD."
+          ]
+        },
+        {
+          "name": "Dereköy",
+          "streets": [
+            "BİLGE SOK.",
+            "CELAL ATİK SOK.",
+            "HAMİT KAPLAN CAD.",
+            "KONUT SOK.",
+            "ŞEHİTLER CAD."
+          ]
+        },
+        {
+          "name": "Dereköy-oluklu",
+          "streets": [
+            "BEŞEVLER CAD."
+          ]
+        },
+        {
+          "name": "Ereğli",
+          "streets": [
+            "EREĞLİ MEZARLIK YANI"
+          ]
+        },
+        {
+          "name": "Karaahmetli",
+          "streets": [
+            "OLUKLU KARAAHMETLİ YOLU"
+          ]
+        },
+        {
+          "name": "Kayacık",
+          "streets": [
+            "214.CADDE",
+            "AHMET DİRİÇ SOK.",
+            "AKASYA SOK.",
+            "ERCÜMENT KOCAER SOK.",
+            "İZNİK YOLU CAD.",
+            "KALICI KONUTLAR YANI",
+            "KORU SOK.",
+            "MUTLU SOK.",
+            "RAUF DENKTAŞ BULVARI",
+            "SAĞLAM SOK.",
+            "ZEYTİNKENT SİTESİ YANI"
+          ]
+        },
+        {
+          "name": "Kızderbent",
+          "streets": [
+            "SİNOP SOK."
+          ]
+        },
+        {
+          "name": "Oluklu",
+          "streets": [
+            "2901.SOK.",
+            "2904. SOK.",
+            "2904.SOK.",
+            "GÖLCÜKLER CAD."
+          ]
+        },
+        {
+          "name": "Pazarköy",
+          "streets": [
+            "KARAPINAR CAD.",
+            "PAZARKÖY CAD."
+          ]
+        },
+        {
+          "name": "Tepeköy",
+          "streets": [
+            "ŞEHRİYAR SOK."
+          ]
+        },
+        {
+          "name": "Yalakdere",
+          "streets": [
+            "KIRKPINAR CAD."
+          ]
+        }
+      ]
+    },
+    {
+      "district": "Kartepe",
+      "neighborhoods": [
+        {
+          "name": "Acısu",
+          "streets": [
+            "GÜLSEVEN CAD."
+          ]
+        },
+        {
+          "name": "Arslanbey",
+          "streets": [
+            "BELEDİYE CAD.",
+            "YILDIRAY CADDESİ CAMİİ SOK."
+          ]
+        },
+        {
+          "name": "Ataevler",
+          "streets": [
+            "BAŞARAN SOK.",
+            "KEMAL PAŞA CAD.",
+            "ÖZGÜRLÜK CAD."
+          ]
+        },
+        {
+          "name": "Ataşehir",
+          "streets": [
+            "ERASLAN CADDESİ ZÜLÜF SOK."
+          ]
+        },
+        {
+          "name": "Balaban",
+          "streets": [
+            "DEĞİRMEN KAPI CAD."
+          ]
+        },
+        {
+          "name": "Çepni",
+          "streets": [
+            "MESUDİYE CAD."
+          ]
+        },
+        {
+          "name": "Derbent",
+          "streets": [
+            "YEŞİLHİSAR SOK."
+          ]
+        },
+        {
+          "name": "Dumlupınar",
+          "streets": [
+            "GÜLEKER SOK.",
+            "MARAŞAL FEVZİ ÇAKMAK CAD.",
+            "ŞEHİT TURGUT ÇİÇEK CAD."
+          ]
+        },
+        {
+          "name": "Emekevler",
+          "streets": [
+            "100. YIL CADDESİ HANDAN SOK.",
+            "ALTUN SOK."
+          ]
+        },
+        {
+          "name": "Ertuğrulgazi",
+          "streets": [
+            "İNEGÖL CADDESİ TAÇ YAPRAK SOK.",
+            "KARDEŞ SOK."
+          ]
+        },
+        {
+          "name": "Eşme",
+          "streets": [
+            "BAĞDAT CAD."
+          ]
+        },
+        {
+          "name": "Fatih Sultan Mehmet",
+          "streets": [
+            "DİCLE CAD.",
+            "KORLU SOK.",
+            "MODA SOK."
+          ]
+        },
+        {
+          "name": "İbrikdere",
+          "streets": [
+            "21.SOK."
+          ]
+        },
+        {
+          "name": "İstasyon",
+          "streets": [
+            "HÜRRİYET CADDESİ NİLÜFER SOK.",
+            "MENDERES BULVARI"
+          ]
+        },
+        {
+          "name": "Karatepe",
+          "streets": [
+            "İZMİT CAD."
+          ]
+        },
+        {
+          "name": "Köseköy",
+          "streets": [
+            "BAĞDAT CAD.",
+            "BUSEM SOK.",
+            "GÖL SOK."
+          ]
+        },
+        {
+          "name": "Maşukiye",
+          "streets": [
+            "ÇINARLI CAD.",
+            "FATİH CAD.",
+            "MEHMET AKİF ERSOY CAD."
+          ]
+        },
+        {
+          "name": "Nusretiye",
+          "streets": [
+            "OKUL SOK."
+          ]
+        },
+        {
+          "name": "Rahmiye",
+          "streets": [
+            "SİMGE SOK.",
+            "VEYSEL KARANİ CAD."
+          ]
+        },
+        {
+          "name": "Sarımeşe",
+          "streets": [
+            "ARPALIK SOK.",
+            "SEZENLER CAD."
+          ]
+        },
+        {
+          "name": "Suadiye",
+          "streets": [
+            "KANAAT SOK."
+          ]
+        },
+        {
+          "name": "Şefkatiye",
+          "streets": [
+            "AHLAT CAD."
+          ]
+        },
+        {
+          "name": "Şirinsulhiye",
+          "streets": [
+            "İZMİT CAD."
+          ]
+        },
+        {
+          "name": "Uzunbey",
+          "streets": [
+            "REFORM CADDESİ KİBAR SOK."
+          ]
+        },
+        {
+          "name": "Uzunçiftlik",
+          "streets": [
+            "ÇOŞKUNLAR SOK."
+          ]
+        },
+        {
+          "name": "Uzuntarla",
+          "streets": [
+            "222. SOK."
+          ]
+        }
+      ]
+    },
+    {
+      "district": "Körfez",
+      "neighborhoods": [
+        {
+          "name": "17 Ağustos",
+          "streets": [
+            "PAPATYALI SOK."
+          ]
+        },
+        {
+          "name": "Agah Ateş",
+          "streets": [
+            "CUMHURİYET CAD."
+          ]
+        },
+        {
+          "name": "Atalar",
+          "streets": [
+            "DİLAVER SOK.",
+            "ORHAN KARABULUT CAD."
+          ]
+        },
+        {
+          "name": "Barbaros",
+          "streets": [
+            "ATATÜRK BULVARI",
+            "PARK CAD."
+          ]
+        },
+        {
+          "name": "Cumhuriyet",
+          "streets": [
+            "HALİS SOK.",
+            "ŞEHİT MEHMET KAPLAN CAD."
+          ]
+        },
+        {
+          "name": "Çamlıtepe",
+          "streets": [
+            "ÇİMEN SOK.",
+            "KOCATEPE CAD.",
+            "NALAN SOK.",
+            "YUNUS EMRE CAD."
+          ]
+        },
+        {
+          "name": "Esentepe",
+          "streets": [
+            "MERALI SOK.",
+            "YELİZ SOK."
+          ]
+        },
+        {
+          "name": "Fatih",
+          "streets": [
+            "HİDAYET SOK.",
+            "SALİM SOK.",
+            "ULUBATLI HASAN CAD.",
+            "ÜSTÜNER SOK.",
+            "ZEYBEK SOK."
+          ]
+        },
+        {
+          "name": "Güney",
+          "streets": [
+            "ATAKAN SOK.",
+            "BAŞAK SOK.",
+            "ENGİN SOK.",
+            "FENER SOK.",
+            "FIRAT ÇAKIROĞLU CAD.",
+            "GÜNCE SOK.",
+            "İSTİKLAL CAD.",
+            "POLİS SOK."
+          ]
+        },
+        {
+          "name": "Hacı Akif",
+          "streets": [
+            "TAHİR CAD."
+          ]
+        },
+        {
+          "name": "Hacıosman",
+          "streets": [
+            "KELEBEK SOK.",
+            "SAKA SOK."
+          ]
+        },
+        {
+          "name": "Kışladüzü",
+          "streets": [
+            "BESTE SOK.",
+            "RADAR CAD."
+          ]
+        },
+        {
+          "name": "Kirazlıyalı",
+          "streets": [
+            "H.ŞİRİN CAD.",
+            "KEMAL NEHROZOĞLU CAD."
+          ]
+        },
+        {
+          "name": "Kuzey",
+          "streets": [
+            "BÜLBÜL SOK.",
+            "GÜLLÜ SOK."
+          ]
+        },
+        {
+          "name": "Mimar Sinan",
+          "streets": [
+            "ADNAN ACARLAR SOK.",
+            "ATİK SOK.",
+            "EŞREF BİTLİS CAD.",
+            "MEHMET AKİF ERSOY CAD.",
+            "SİTE SOK."
+          ]
+        },
+        {
+          "name": "Yavuz Sultan Selim",
+          "streets": [
+            "ERDOĞAN SOK.",
+            "KALYON SOK."
+          ]
+        },
+        {
+          "name": "Yeniyalı",
+          "streets": [
+            "CÖMERT SOK.",
+            "HAMİT KAPLAN BULVARI",
+            "LEYLAK SOK.",
+            "OKUL SOK.",
+            "ÖZENLER CAD."
+          ]
+        },
+        {
+          "name": "Yukarı Hereke",
+          "streets": [
+            "ÇARŞI CAD.",
+            "ÇOBAN ÇUKURU SOK."
+          ]
+        }
+      ]
+    }
+  ]
+}

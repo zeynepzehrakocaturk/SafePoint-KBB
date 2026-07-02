@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kocaeli afet toplanma alanları ve güncel deprem bilgisi — SafePoint KBB">
+  <meta name="author" content="Zeynep Zehra Kocatürk">
+  <title>SafePoint KBB — Afet Konum Uygulaması</title>
+
+  <!-- Harita kütüphanesi -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+        crossorigin="">
+
+  <!-- Uygulama stilleri -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <!-- Üst başlık -->
+  <header class="header" role="banner">
+    <div class="header__brand">
+      <div class="header__logo" aria-hidden="true">
+        <img src="/logo.png" alt="" class="header__logo-image">
+      </div>
+      <div>
+        <h1 class="header__title">Afet Konum Uygulaması</h1>
+        <p class="header__subtitle">
+          Kocaeli Büyükşehir Belediyesi — Acil Toplanma Alanları &amp; Deprem Bilgisi
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sistem durum çubuğu -->
+  <div id="infobar" class="infobar infobar--info" role="status" aria-live="polite">
+    <span id="infobar-text">Sistem başlatılıyor...</span>
+    <span id="infobar-time" class="infobar__time"></span>
+  </div>
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero__copy">
+      <p class="hero__eyebrow">Acil durumda tek bakışta karar verin</p>
+      <h2 id="hero-title" class="hero__title">
+        En yakın güvenli alanı, canlı deprem bilgisini ve harita yönlendirmesini aynı ekranda görün.
+      </h2>
+      <p class="hero__lead">
+        SafePoint KBB; konumunuzu alır, en yakın toplanma alanlarını sıralar, güncel deprem verilerini işler ve harita üzerinde anlaşılır bir özet sunar.
+      </p>
+
+      <div class="hero__actions" aria-label="Hızlı işlemler">
+        <button id="refresh-data-btn" class="btn btn--primary btn--large" type="button">
+          Veriyi Yenile
+        </button>
+      </div>
+
+      <ul class="hero__meta" aria-label="Uygulama bilgileri">
+        <li>
+          <span class="hero__meta-label">Konum modu</span>
+          <strong>NVI CSBM — 25.000+ sokak</strong>
+        </li>
+        <li>
+          <span class="hero__meta-label">Veri kaynağı</span>
+          <strong>AFAD + KBB + Kandilli</strong>
+        </li>
+        <li>
+          <span class="hero__meta-label">İpucu</span>
+          <strong>Deprem satırına tıklayın, harita açılır</strong>
+        </li>
+      </ul>
+    </div>
+
+    <div class="hero__stats" aria-label="Anlık durum kartları">
+      <article class="stat-card stat-card--accent">
+        <span class="stat-card__label">En yakın alan</span>
+        <strong id="stat-nearest-area" class="stat-card__value">Hazırlanıyor</strong>
+        <span id="stat-nearest-area-sub" class="stat-card__sub">Konum bilgisi bekleniyor</span>
+      </article>
+
+      <article class="stat-card">
+        <span class="stat-card__label">Toplanma alanı</span>
+        <strong id="stat-area-count" class="stat-card__value">0</strong>
+        <span class="stat-card__sub">Haritada işaretli nokta</span>
+      </article>
+
+      <article class="stat-card">
+        <span class="stat-card__label">Bugünkü deprem</span>
+        <strong id="stat-earthquake-count" class="stat-card__value">0</strong>
+        <span class="stat-card__sub">500 km yarıçapında kayıt</span>
+      </article>
+    </div>
+  </section>
+
+  <main class="layout" role="main">
+    <!-- Sol bilgi paneli -->
+    <aside class="sidebar" aria-label="Bilgi panelleri">
+      <section class="panel panel--location" aria-labelledby="panel-location-title">
+        <h2 id="panel-location-title" class="panel__title">Konum Seçimi</h2>
+        <p class="panel__desc">NVI (CSBM) veritabanındaki Kocaeli ilçe, mahalle ve sokak/cadde listesinden konumunuzu seçin.</p>
+        <div class="location-summary">
+          <div class="location-summary__item">
+            <span class="location-summary__label">Durum</span>
+            <strong id="user-location-status">Konum seçimi bekleniyor</strong>
+          </div>
+          <div class="location-summary__item">
+            <span class="location-summary__label">Koordinat</span>
+            <strong id="user-location-coords">-</strong>
+          </div>
+          <div class="location-summary__item">
+            <span class="location-summary__label">Kaynak</span>
+            <strong id="user-location-source">Kocaeli seçimi bekleniyor</strong>
+          </div>
+        </div>
+        <div class="manual-location">
+          <p class="panel__hint">Sadece kendi konumunuzu seçin; tarayıcıdan konum alınmaz.</p>
+          <div class="manual-location__grid">
+            <label class="manual-location__field manual-location__field--full">
+              <span>İl</span>
+              <input id="manual-il" type="text" value="Kocaeli" readonly aria-label="İl sabit Kocaeli">
+            </label>
+            <label class="manual-location__field">
+              <span>İlçe</span>
+              <select id="manual-ilce" aria-label="İlçe seçin">
+                <option value="">İlçe seçin</option>
+              </select>
+            </label>
+            <label class="manual-location__field">
+              <span>Mahalle</span>
+              <select id="manual-mahalle" aria-label="Mahalle seçin">
+                <option value="">Mahalle seçin</option>
+              </select>
+            </label>
+            <label class="manual-location__field manual-location__field--full">
+              <span>Cadde / Sokak</span>
+              <select id="manual-cadde" aria-label="Cadde veya sokak seçin">
+                <option value="">Cadde / sokak seçin</option>
+              </select>
+              <small id="manual-cadde-count" class="panel__hint panel__hint--inline"></small>
+            </label>
+          </div>
+          <button id="manual-location-btn" class="btn btn--secondary btn--large manual-location__button" type="button">Konumu Uygula</button>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="panel-areas-title">
+        <h2 id="panel-areas-title" class="panel__title">En Yakın Toplanma Alanları</h2>
+        <p class="panel__desc">Konumunuza göre en yakın 3 acil toplanma alanı</p>
+        <p class="panel__hint">İsterseniz aşağıdaki kartlardan yol tarifi alabilir ya da haritaya bakarak karar verebilirsiniz.</p>
+        <div id="nearest-areas" class="nearest-list">
+          <div class="loading-box" role="status">
+            <div class="spinner" aria-hidden="true"></div>
+            <span>Konum alınıyor...</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel" aria-labelledby="panel-earthquake-title">
+        <h2 id="panel-earthquake-title" class="panel__title">Bugün Yaşanan Depremler</h2>
+        <p class="panel__desc">500 km yarıçapındaki güncel depremler (Kandilli)</p>
+        <p class="panel__hint">Bir satıra tıklayın; harita ilgili deprem noktasına odaklansın ve detay penceresi açılsın.</p>
+        <div id="nearest-earthquake" class="nearest-earthquake" aria-live="polite"></div>
+        <div id="deprem-listesi" class="deprem-container">
+          <div class="loading-box" role="status">
+            <div class="spinner" aria-hidden="true"></div>
+            <span>Deprem verileri yükleniyor...</span>
+          </div>
+        </div>
+      </section>
+    </aside>
+
+    <!-- Harita alanı -->
+    <section class="map-section" aria-label="Harita görünümü">
+      <div id="map-loading" class="map-loading">
+        <div class="spinner spinner--large" aria-hidden="true"></div>
+        <span>Harita yükleniyor...</span>
+      </div>
+      <div id="map"></div>
+    </section>
+  </main>
+
+  <!-- Deprem detay modalı -->
+  <div id="deprem-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal__content">
+      <button id="modal-close" class="modal__close" type="button" aria-label="Kapat">&times;</button>
+      <h3 id="modal-title" class="modal__title">Deprem Detayı</h3>
+      <div id="deprem-map" class="modal__map" aria-label="Deprem konumu haritası"></div>
+      <div id="modal-info" class="modal__info"></div>
+    </div>
+  </div>
+
+  <footer class="footer" role="contentinfo">
+    <p>Kocaeli Büyükşehir Belediyesi Yazılım Geliştirme Şube Müdürlüğü — Staj Projesi</p>
+    <p class="footer__note">
+      Veriler bilgilendirme amaçlıdır. Resmi afet bildirimleri için AFAD ve belediye kanallarını takip ediniz.
+    </p>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+          integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+          crossorigin=""></script>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

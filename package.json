@@ -1,0 +1,44 @@
+{
+  "name": "safepoint-kbb",
+  "version": "1.0.0",
+  "description": "Kocaeli Büyükşehir Belediyesi afet toplanma alanları ve deprem bilgilendirme web uygulaması",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "node --test tests/geo.test.mjs tests/areaCoordinates.test.mjs",
+    "test:e2e": "node --test tests/e2e-user-flow.mjs",
+    "build:csbm": "node scripts/build-kocaeli-csbm-hierarchy.mjs",
+    "geocode:streets": "node scripts/geocode-kocaeli-streets.mjs",
+    "screenshots": "node scripts/capture-screenshots.mjs"
+  },
+  "keywords": [
+    "afet",
+    "deprem",
+    "kocaeli",
+    "leaflet",
+    "harita",
+    "toplanma-alani",
+    "web-api"
+  ],
+  "author": "Zeynep Zehra Kocatürk",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zeynepzehrakocaturk/SafePoint-KBB.git"
+  },
+  "homepage": "https://github.com/zeynepzehrakocaturk/SafePoint-KBB#readme",
+  "bugs": {
+    "url": "https://github.com/zeynepzehrakocaturk/SafePoint-KBB/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "playwright": "^1.61.1"
+  }
+}

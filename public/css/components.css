@@ -1,0 +1,468 @@
+/**
+ * UI bileşen stilleri — panel, kart, tablo, modal, buton.
+ */
+
+/* ── Panel ── */
+.panel {
+  background: var(--color-surface);
+  border: 1px solid rgba(23, 50, 77, 0.08);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  box-shadow: var(--shadow-sm);
+  backdrop-filter: blur(12px);
+}
+
+.panel--location {
+  background: linear-gradient(180deg, rgba(14, 90, 167, 0.08), rgba(255, 255, 255, 0.92));
+}
+
+.panel__title {
+  font-size: 1.08rem;
+  line-height: 1.25;
+  color: var(--color-primary);
+  margin-bottom: 0.25rem;
+}
+
+.panel__desc {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+}
+
+.panel__hint {
+  margin: -0.55rem 0 1rem;
+  padding: 0.7rem 0.8rem;
+  border-radius: 14px;
+  background: rgba(14, 90, 167, 0.06);
+  border: 1px solid rgba(14, 90, 167, 0.08);
+  color: var(--color-text-muted);
+  font-size: 0.78rem;
+}
+
+.panel__hint--inline {
+  display: block;
+  margin: 0.35rem 0 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.location-summary {
+  display: grid;
+  gap: 0.7rem;
+  margin-top: 0.25rem;
+}
+
+.location-summary__item {
+  padding: 0.8rem 0.85rem;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(23, 50, 77, 0.08);
+}
+
+.location-summary__label {
+  display: block;
+  color: var(--color-text-muted);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.25rem;
+}
+
+.location-summary strong {
+  display: block;
+  color: var(--color-text);
+  font-size: 0.94rem;
+}
+
+.manual-location {
+  margin-top: 1rem;
+}
+
+.manual-location__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.manual-location__field--full {
+  grid-column: 1 / -1;
+}
+
+.manual-location__field {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+}
+
+.manual-location__field input,
+.manual-location__field select {
+  width: 100%;
+  border: 1px solid rgba(23, 50, 77, 0.14);
+  border-radius: 12px;
+  padding: 0.7rem 0.8rem;
+  font: inherit;
+  color: var(--color-text);
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.manual-location__field input:focus,
+.manual-location__field select:focus {
+  outline: 2px solid rgba(14, 90, 167, 0.22);
+  border-color: rgba(14, 90, 167, 0.38);
+}
+
+.manual-location__field input[readonly] {
+  background: rgba(245, 248, 251, 0.92);
+}
+
+.manual-location__button {
+  width: 100%;
+}
+
+@media (max-width: 560px) {
+  .manual-location__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── Yükleme ── */
+.loading-box {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.1rem;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px dashed rgba(23, 50, 77, 0.12);
+  border-radius: 14px;
+}
+
+.spinner {
+  width: 24px;
+  height: 24px;
+  border: 3px solid rgba(23, 50, 77, 0.12);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.spinner--large {
+  width: 40px;
+  height: 40px;
+  border-width: 4px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Toplanma Alanı Kartları ── */
+.nearest-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.area-card {
+  border: 1px solid var(--color-border);
+  border-radius: 18px;
+  padding: 1rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(250, 252, 255, 0.96));
+  transition:
+    border-color var(--transition-fast),
+    box-shadow var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.area-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 10px 24px rgba(14, 90, 167, 0.14);
+  transform: translateY(-1px);
+}
+
+.area-card--highlight {
+  border-color: rgba(31, 157, 104, 0.28);
+  background: linear-gradient(180deg, rgba(240, 250, 244, 0.98), rgba(255, 255, 255, 0.98));
+}
+
+.area-rank {
+  display: inline-block;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  margin-bottom: 0.4rem;
+}
+
+.area-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+.area-meta {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.area-meta--approx {
+  color: var(--color-warning, #b7791f);
+  font-style: italic;
+}
+
+.area-distance {
+  font-size: 0.85rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* ── Butonlar ── */
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.55rem 0.95rem;
+  border-radius: 999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  border: 1px solid transparent;
+  transition:
+    background var(--transition-fast),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.btn--primary {
+  background: var(--color-primary);
+  color: #fff;
+  box-shadow: 0 10px 18px rgba(14, 90, 167, 0.18);
+}
+
+.btn--primary:hover {
+  background: var(--color-primary-dark);
+  transform: translateY(-1px);
+}
+
+.btn--secondary {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--color-primary-dark);
+  border-color: rgba(14, 90, 167, 0.18);
+}
+
+.btn--secondary:hover {
+  border-color: rgba(14, 90, 167, 0.3);
+  box-shadow: 0 10px 18px rgba(14, 90, 167, 0.1);
+  transform: translateY(-1px);
+}
+
+.btn--large {
+  padding: 0.75rem 1.15rem;
+  font-size: 0.92rem;
+}
+
+/* ── Deprem Özeti ── */
+.nearest-earthquake {
+  background: linear-gradient(135deg, rgba(255, 243, 230, 0.96), rgba(255, 255, 255, 0.98));
+  border: 1px solid rgba(228, 87, 46, 0.16);
+  border-radius: 16px;
+  padding: 0.85rem 0.95rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.85rem;
+  display: none;
+}
+
+.nearest-earthquake.visible {
+  display: block;
+}
+
+.nearest-earthquake strong {
+  color: var(--color-accent);
+}
+
+/* ── Deprem Tablosu ── */
+.deprem-table-wrap {
+  overflow-x: auto;
+  border-radius: 18px;
+  border: 1px solid rgba(23, 50, 77, 0.08);
+  background: rgba(255, 255, 255, 0.74);
+}
+
+.deprem-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+
+.deprem-table th {
+  background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary));
+  color: #fff;
+  padding: 0.7rem 0.55rem;
+  text-align: left;
+  font-weight: 600;
+  white-space: nowrap;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.deprem-table td {
+  padding: 0.55rem 0.55rem;
+  border-bottom: 1px solid rgba(23, 50, 77, 0.08);
+  cursor: pointer;
+}
+
+.deprem-table tr:hover td,
+.deprem-table tr:focus-visible td {
+  background: rgba(14, 90, 167, 0.08);
+}
+
+.deprem-table tr.nearest-row td {
+  background: linear-gradient(90deg, rgba(255, 244, 205, 0.95), rgba(255, 255, 255, 0.98));
+  font-weight: 600;
+}
+
+/* ── Uyarı Kutuları ── */
+.alert {
+  padding: 0.85rem 0.9rem;
+  border-radius: 16px;
+  font-size: 0.85rem;
+}
+
+.alert--error {
+  background: linear-gradient(135deg, rgba(250, 219, 216, 0.96), rgba(255, 255, 255, 0.95));
+  color: #922b21;
+  border: 1px solid rgba(146, 43, 33, 0.12);
+}
+
+/* ── Büyüklük Rozetleri ── */
+.mag-badge {
+  display: inline-block;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: #fff;
+}
+
+.mag-low  { background: var(--color-success); }
+.mag-mid  { background: var(--color-warning); }
+.mag-high { background: var(--color-accent); }
+
+/* ── Modal ── */
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 1rem;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal__content {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: var(--shadow-lg);
+}
+
+.modal__close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--color-text-muted);
+  line-height: 1;
+}
+
+.modal__close:hover {
+  color: var(--color-accent);
+}
+
+.modal__title {
+  font-size: 1.2rem;
+  color: var(--color-primary);
+  padding-right: 2rem;
+}
+
+.modal__map {
+  height: 280px;
+  border-radius: 16px;
+  margin: 1rem 0;
+  overflow: hidden;
+}
+
+.modal__info {
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* ── Harita Marker'ları ── */
+.user-marker-icon,
+.area-marker-icon,
+.eq-marker-icon {
+  background: none !important;
+  border: none !important;
+}
+
+.marker-pin {
+  width: 28px;
+  height: 28px;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  border: 2px solid #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.marker-pin--user {
+  background: linear-gradient(135deg, #d62828, #ff4d4f);
+}
+
+.marker-pin--area {
+  background: linear-gradient(135deg, #1f9d68, #16a34a);
+  width: 22px;
+  height: 22px;
+}
+
+.marker-pin--area-nearest {
+  background: linear-gradient(135deg, #22c55e, #86efac);
+  width: 26px;
+  height: 26px;
+}
+
+.marker-pin--eq {
+  border-radius: 50%;
+  transform: none;
+}
+
+@media (max-width: 480px) {
+  .deprem-table {
+    font-size: 0.72rem;
+  }
+
+  .btn--large {
+    width: 100%;
+    justify-content: center;
+  }
+}
