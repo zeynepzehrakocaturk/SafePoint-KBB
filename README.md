@@ -2,273 +2,250 @@
 
 # SafePoint KBB
 
-**Kocaeli Afet Konum Uygulaması**
+**Kocaeli Disaster Location Application**
 
-Kocaeli'deki acil toplanma alanlarını ve güncel deprem verilerini harita üzerinde bir arada sunan web uygulaması.
+A web application that presents emergency assembly areas and current earthquake data in Kocaeli together on a map.
 
 [![Node.js](https://img.shields.io/badge/Node.js-18%2B-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
 [![Express](https://img.shields.io/badge/Express-4.x-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
 [![Leaflet](https://img.shields.io/badge/Leaflet-1.9.4-199900?style=for-the-badge&logo=leaflet&logoColor=white)](https://leafletjs.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
-[![Tests](https://img.shields.io/badge/tests-passing-brightgreen?style=for-the-badge)](#-testler)
+[![Tests](https://img.shields.io/badge/tests-passing-brightgreen?style=for-the-badge)](#-tests)
 
-[Özellikler](#-özellikler) ·
-[Kurulum](#-kurulum) ·
-[Çalıştırma](#-çalıştırma) ·
-[Ekran Görüntüleri](#-ekran-görüntüleri) ·
-[Klasör Yapısı](#-klasör-yapısı) ·
-[Geliştirme Önerileri](#-geliştirme-önerileri)
+[Features](#-features) ·
+[Installation](#-installation) ·
+[Execution](#-execution) ·
+[Screenshots](#-screenshots) ·
+[Folder Structure](#-folder-structure) ·
+[Development Suggestions](#-development-suggestions)
 
 </div>
 
 ---
 
-## Proje Adı
+## Project Name
 
-**SafePoint KBB** — Kocaeli Büyükşehir Belediyesi Afet Konum Uygulaması
+**SafePoint KBB** — Kocaeli Metropolitan Municipality Disaster Location Application
 
-## Mesleki Uygulama (Staj) Bilgisi
+## Project Description
 
-| Alan | Bilgi |
-|------|-------|
-| **Öğrenci** | Zeynep Zehra Kocatürk (230501017) |
-| **Bölüm** | Bilgisayar Mühendisliği — 2. Sınıf |
-| **Üniversite** | Kocaeli Sağlık ve Teknoloji Üniversitesi, Mühendislik ve Doğa Bilimleri Fakültesi |
-| **Kurum** | Kocaeli Büyükşehir Belediyesi — Yazılım Geliştirme Şube Müdürlüğü |
-| **Staj süresi** | 01.07.2025 – 05.08.2025 (25 iş günü) |
-| **Staj sorumlusu** | Eşref Manav — Bilgisayar Mühendisi |
+SafePoint KBB is a professional practice (internship) project developed at the Kocaeli Metropolitan Municipality Software Development Branch Directorate. The application combines AFAD assembly area data, **NVI CSBM (Avenue/Street/Boulevard/Square) address hierarchy**, real street coordinates, and Kandilli earthquake records on a single screen.
 
-> Staj sürecinde önce web servisleri (API) araştırması yapıldı; ardından afet toplanma alanları ve deprem verilerini birleştiren bu uygulama geliştirildi. Proje, staj defterinde anlatılan çekirdek işlevlerin (Leaflet harita, Haversine mesafe, Express API, Kandilli deprem entegrasyonu) üzerine, kamu hizmeti kalitesini artırmak için **NVI CSBM tabanlı tam adres seçimi** ve **gerçek sokak koordinatları** eklendi.
+The user selects one of the 12 districts of Kocaeli, their neighborhood, and an avenue/street option from the list. The system calculates the nearest emergency assembly areas, filters the earthquake data, and displays them on the map using the **real coordinate** of the selected address (OpenStreetMap + Nominatim).
 
-## Proje Açıklaması
+## Purpose of the Project
 
-SafePoint KBB, Kocaeli Büyükşehir Belediyesi Yazılım Geliştirme Şube Müdürlüğü'nde geliştirilen bir mesleki uygulama (staj) projesidir. Uygulama; AFAD toplanma alanı verileri, **NVI CSBM (Cadde/Sokak/Bulvar/Meydan) adres hiyerarşisi**, gerçek sokak koordinatları ve Kandilli deprem kayıtlarını tek ekranda birleştirir.
-
-Kullanıcı Kocaeli'nin 12 ilçesinden birini, mahallesini ve sokak/cadde seçeneğini listeden seçer. Sistem seçilen adrese ait **gerçek koordinatı** (OpenStreetMap + Nominatim) kullanarak en yakın acil toplanma alanlarını hesaplar, deprem verilerini filtreler ve haritada gösterir.
-
-## Projenin Amacı
-
-| Hedef | Açıklama |
+| Target | Description |
 |-------|----------|
-| **Tam adres seçimi** | NVI CSBM tabanlı 25.363 sokak/cadde — yalnızca AFAD alanları değil |
-| **Gerçek koordinat** | OpenStreetMap + Nominatim ile sokak düzeyinde konum doğrulama |
-| **Afet farkındalığı** | Kocaeli'deki 496 acil toplanma alanını haritada görünür kılmak |
-| **Konum tabanlı yönlendirme** | Seçilen adrese göre en yakın 3 alanı sıralamak |
-| **Deprem bilgilendirme** | Kandilli verilerini 500 km yarıçapında filtreleyerek sunmak |
-| **Kullanım kolaylığı** | Tarayıcı konum izni gerektirmeden Kocaeli içi manuel seçim |
-| **Güvenli mimari** | XSS koruması, güvenlik başlıkları, doğrulanmış geocode proxy |
+| **Full address selection** | NVI CSBM-based 25,363 streets/avenues — not only AFAD areas |
+| **Real coordinate** | Street-level location verification with OpenStreetMap + Nominatim |
+| **Disaster awareness** | Making 496 emergency assembly areas in Kocaeli visible on the map |
+| **Location-based routing** | Listing the nearest 3 areas based on the selected address |
+| **Earthquake information** | Presenting Kandilli data by filtering it within a 500 km radius |
+| **Ease of use** | Manual selection within Kocaeli without requiring browser location permission |
+| **Secure architecture** | XSS protection, security headers, verified geocode proxy |
 
-## Özellikler
+## Features
 
-- **NVI CSBM konum seçimi** — 12 ilçe, 488 mahalle, **25.363** cadde/sokak/bulvar (İzmit: 3.428 sokak)
-- **Gerçek sokak koordinatları** — OSM/Nominatim önbelleği + canlı geocode (`/api/street-location`)
-- **İnteraktif harita** — Leaflet.js + OpenStreetMap ile Kocaeli odaklı görünüm
-- **Mesafe hesaplama** — Haversine formülü ile coğrafi mesafe
-- **Toplanma alanları** — En yakın 3 alan listesi, harita marker'ları ve Google Maps yol tarifi
-- **Deprem verileri** — Kandilli API üzerinden canlı deprem bilgisi
-- **Otomatik yenileme** — 60 saniyede bir deprem verisi güncelleme
-- **Panel-harita etkileşimi** — Deprem satırına tıklayınca haritada odaklanma ve detay modalı
-- **Responsive tasarım** — Mobil, tablet ve masaüstü uyumlu arayüz
-- **Erişilebilirlik** — ARIA etiketleri, klavye navigasyonu, canlı durum mesajları
-- **Güvenlik** — `escapeHtml()` ile XSS koruması, HTTP güvenlik başlıkları, geocode rate limit
+- **NVI CSBM location selection** — 12 districts, 488 neighborhoods, **25,363** avenues/streets/boulevards (İzmit: 3,428 streets)
+- **Real street coordinates** — OSM/Nominatim cache + live geocode (`/api/street-location`)
+- **Interactive map** — Kocaeli-focused view with Leaflet.js + OpenStreetMap
+- **Distance calculation** — Geographical distance via the Haversine formula
+- **Assembly areas** — List of the nearest 3 areas, map markers, and Google Maps directions
+- **Earthquake data** — Live earthquake information via Kandilli API
+- **Automatic refresh** — Earthquake data update every 60 seconds
+- **Panel-map interaction** — Focusing on the map and detail modal upon clicking an earthquake row
+- **Responsive design** — Mobile, tablet, and desktop compatible interface
+- **Accessibility** — ARIA labels, keyboard navigation, live status messages
+- **Security** — XSS protection with `escapeHtml()`, HTTP security headers, geocode rate limit
 
-## Kullanılan Teknolojiler
+## Technologies Used
 
 ### Frontend
 
-| Teknoloji | Kullanım |
+| Technology | Usage |
 |-----------|----------|
-| HTML5 | Semantik sayfa yapısı |
-| CSS3 | Modüler stil mimarisi (BEM benzeri) |
-| JavaScript (ES Modules) | Modüler frontend mimarisi |
-| Leaflet.js 1.9.4 | Harita görselleştirme |
+| HTML5 | Semantic page structure |
+| CSS3 | Modular styling architecture (BEM-like) |
+| JavaScript (ES Modules) | Modular frontend architecture |
+| Leaflet.js 1.9.4 | Map visualization |
 
 ### Backend
 
-| Teknoloji | Kullanım |
+| Technology | Usage |
 |-----------|----------|
-| Node.js 18+ | Sunucu çalışma ortamı |
-| Express.js 4.x | REST API ve statik dosya sunumu |
-| CORS | Cross-origin istek yönetimi |
+| Node.js 18+ | Server runtime environment |
+| Express.js 4.x | REST API and static file serving |
+| CORS | Cross-origin request management |
 
-### Dış Servisler
+### External Services
 
-| Servis | Kullanım |
+| Service | Usage |
 |--------|----------|
-| NVI CSBM (adres.nvi.gov.tr türevi) | Kocaeli ilçe/mahalle/sokak hiyerarşisi |
-| AFAD Kocaeli | Toplanma alanı verisi |
-| OpenStreetMap Overpass | Toplu sokak koordinat eşleştirme |
-| Nominatim | Canlı adres → koordinat çözümleme |
-| Kandilli Deprem API | Canlı deprem verisi |
-| Google Maps | Yürüyüş yol tarifi yönlendirme |
+| NVI CSBM (adres.nvi.gov.tr derivative) | Kocaeli district/neighborhood/street hierarchy |
+| AFAD Kocaeli | Assembly area data |
+| OpenStreetMap Overpass | Bulk street coordinate matching |
+| Nominatim | Live address → coordinate resolution |
+| Kandilli Earthquake API | Live earthquake data |
+| Google Maps | Walking directions routing |
 
-### Geliştirme Araçları
+### Development Tools
 
-| Araç | Kullanım |
+| Tool | Usage |
 |------|----------|
-| Node.js Test Runner | Birim testleri |
-| Playwright | E2E testler ve ekran görüntüsü alma |
+| Node.js Test Runner | Unit tests |
+| Playwright | E2E tests and taking screenshots |
 
-## Kurulum
+## Installation
 
-### Gereksinimler
+### Requirements
 
-- [Node.js](https://nodejs.org/) **18.0.0** veya üzeri
-- [npm](https://www.npmjs.com/) (Node.js ile birlikte gelir)
-- Modern bir web tarayıcısı (Chrome, Firefox, Edge)
+- [Node.js](https://nodejs.org/) **18.0.0** or higher
+- [npm](https://www.npmjs.com/) (Comes with Node.js)
+- A modern web browser (Chrome, Firefox, Edge)
 
-### Adımlar
+### Steps
 
 ```bash
-# 1. Depoyu klonlayın
-git clone https://github.com/zeynepzehrakocaturk/SafePoint-KBB.git
+# 1. Clone the repository
+git clone [https://github.com/zeynepzehrakocaturk/SafePoint-KBB.git](https://github.com/zeynepzehrakocaturk/SafePoint-KBB.git)
 cd SafePoint-KBB
 
-# 2. Bağımlılıkları yükleyin
+# 2. Install dependencies
 npm install
 
-# 3. (E2E testler için) Playwright tarayıcısını kurun
+# 3. (For E2E tests) Install the Playwright browser
 npx playwright install chromium
 
-# 4. Testleri çalıştırın
+# 4. Run the tests
 npm test
 ```
 
-> **Not:** `data/kocaeli-csbm-hierarchy.json` ve `data/kocaeli-street-coordinates.json` dosyaları repoda hazır gelir; `npm start` ile doğrudan çalıştırabilirsiniz. Veriyi yeniden üretmek isterseniz:
+> **Note:** The `data/kocaeli-csbm-hierarchy.json` and `data/kocaeli-street-coordinates.json` files come ready in the repo; you can run it directly with `npm start`. If you want to regenerate the data:
 
 ```bash
 npm run build:csbm
 npm run geocode:streets -- --district=İzmit
 ```
 
-## Çalıştırma
+## Execution
 
 ```bash
-# Sunucuyu başlatın
+# Start the server
 npm start
 ```
 
-Tarayıcıda açın: **http://localhost:3000**
+Open in browser: **http://localhost:3000**
 
-### Kullanım adımları
+### Usage steps
 
-1. Sol panelden **İlçe**, **Mahalle** ve listeden **Cadde/Sokak** seçin
-2. **Konumu Uygula** butonuna tıklayın
-3. Sistem gerçek sokak koordinatını yükler ve en yakın 3 toplanma alanını listeler
-4. Deprem satırına tıklayarak detay modalını açın
-5. **Veriyi Yenile** ile güncel verileri alın
+1. Select **District**, **Neighborhood** from the left panel, and **Avenue/Street** from the list
+2. Click the **Apply Location** button
+3. The system loads the real street coordinate and lists the nearest 3 assembly areas
+4. Open the detail modal by clicking on the earthquake row
+5. Get current data with **Refresh Data**
 
-> **Not:** Kocaeli genelinde 25.363 sokak/cadde NVI CSBM listesinden gelir. Koordinatı önbellekte olmayan sokaklar ilk seçimde Nominatim ile canlı çözümlenir ve kaydedilir.
+> **Note:** 25,363 streets/avenues across Kocaeli come from the NVI CSBM list. Streets whose coordinates are not in the cache are resolved live with Nominatim on the first selection and saved.
 
 <details>
-<summary><strong>Ortam değişkenleri</strong></summary>
+<summary><strong>Environment variables</strong></summary>
 
-| Değişken | Varsayılan | Açıklama |
+| Variable | Default | Description |
 |----------|-----------|----------|
-| `PORT` | `3000` | Sunucu port numarası |
+| `PORT` | `3000` | Server port number |
 | `APP_URL` | `http://localhost:3000` | Screenshot/E2E test base URL |
 
 ```bash
-# Örnek: Farklı portta çalıştırma
+# Example: Running on a different port
 PORT=8080 npm start
 ```
 
 </details>
 
-## Ekran Görüntüleri
+## Screenshots
 
-> Görseller `npm run screenshots` komutu ile alınmıştır.
+> Images were captured using the `npm run screenshots` command.
 
-### Konum Seçimi (NVI CSBM)
+### Location Selection (NVI CSBM)
 
-İzmit / 28 Haziran mahallesi örneğinde tam sokak listesi — PTT ve NVI adres sistemine uyumlu.
-
-<p align="center">
-  <img src="screenshots/location-panel.png" alt="NVI CSBM konum seçim paneli" width="420">
-</p>
-
-### Ana Dashboard
-
-Uygulamanın genel görünümü — sol panelde toplanma alanları ve deprem listesi, sağda interaktif harita.
+Full street list in the İzmit / 28 Haziran neighborhood example — compatible with PTT and NVI address systems.
 
 <p align="center">
-  <img src="screenshots/dashboard.png" alt="SafePoint KBB ana ekran görünümü" width="900">
+  <img src="screenshots/location-panel.png" alt="NVI CSBM location selection panel" width="420">
 </p>
 
-### Harita Görünümü
+### Main Dashboard
 
-Kullanıcı konumu, toplanma alanı ve deprem marker'larının harita üzerindeki gösterimi.
+The overall view of the application — assembly areas and earthquake list on the left panel, interactive map on the right.
 
 <p align="center">
-  <img src="screenshots/map-view.png" alt="Harita marker görünümü" width="700">
+  <img src="screenshots/dashboard.png" alt="SafePoint KBB main screen view" width="900">
 </p>
 
-### Toplanma Alanları Paneli
+### Map View
 
-Konuma göre en yakın 3 acil toplanma alanı ve Google Maps yol tarifi butonları.
+The representation of user location, assembly area, and earthquake markers on the map.
 
 <p align="center">
-  <img src="screenshots/assembly-panel.png" alt="Toplanma alanları paneli" width="420">
+  <img src="screenshots/map-view.png" alt="Map marker view" width="700">
 </p>
 
-### Deprem Paneli
+### Assembly Areas Panel
 
-500 km yarıçapındaki güncel depremlerin tablo halinde listelenmesi.
+The nearest 3 emergency assembly areas based on location and Google Maps direction buttons.
 
 <p align="center">
-  <img src="screenshots/earthquake-panel.png" alt="Deprem paneli görünümü" width="420">
+  <img src="screenshots/assembly-panel.png" alt="Assembly areas panel" width="420">
 </p>
 
-### Deprem Detay Modalı
+### Earthquake Panel
 
-Tablodaki bir depreme tıklandığında açılan detay penceresi ve mini harita.
+Listing of current earthquakes within a 500 km radius in a table format.
 
 <p align="center">
-  <img src="screenshots/earthquake-modal.png" alt="Deprem detay modalı" width="500">
+  <img src="screenshots/earthquake-panel.png" alt="Earthquake panel view" width="420">
 </p>
 
-### Mobil Görünüm
+### Earthquake Detail Modal
 
-390×844 viewport ile responsive tasarım testi.
+The detail window and mini-map that open when an earthquake in the table is clicked.
 
 <p align="center">
-  <img src="screenshots/mobile-view.png" alt="Mobil responsive görünüm" width="320">
+  <img src="screenshots/earthquake-modal.png" alt="Earthquake detail modal" width="500">
+</p>
+
+### Mobile View
+
+Responsive design test with a 390×844 viewport.
+
+<p align="center">
+  <img src="screenshots/mobile-view.png" alt="Mobile responsive view" width="320">
 </p>
 
 
-<details>
-<summary><strong>Ekran görüntülerini yeniden alma</strong></summary>
 
-```bash
-npm start
-# Yeni terminalde:
-npm run screenshots
-```
-
-</details>
-
-## Klasör Yapısı
+## Folder Structure
 
 ```
 SafePoint-KBB/
-├── server.js                          # Uygulama giriş noktası
-├── package.json                       # Proje bağımlılıkları ve scriptler
-├── LICENSE                            # MIT lisansı
+├── server.js                        # Application entry point
+├── package.json                     # Project dependencies and scripts
+├── LICENSE                          # MIT license
 ├── .gitignore
 ├── .editorconfig
 │
-├── src/server/                        # Backend kaynak kodları
-│   ├── app.js                         # Express uygulama fabrikası
-│   ├── config.js                      # Sunucu yapılandırması
+├── src/server/                      # Backend source codes
+│   ├── app.js                       # Express application factory
+│   ├── config.js                    # Server configuration
 │   ├── middleware/
-│   │   └── security.js                # HTTP güvenlik başlıkları
+│   │   └── security.js              # HTTP security headers
 │   ├── routes/
-│   │   └── api.routes.js              # REST API endpoint'leri
+│   │   └── api.routes.js            # REST API endpoints
 │   └── services/
-│       ├── csbmHierarchy.js           # NVI CSBM hiyerarşisi + koordinat önbelleği
-│       └── nominatim.js               # Geocode proxy (cache + rate limit)
+│       ├── csbmHierarchy.js         # NVI CSBM hierarchy + coordinate cache
+│       └── nominatim.js             # Geocode proxy (cache + rate limit)
 │
-├── public/                            # Frontend statik dosyalar
+├── public/                          # Frontend static files
 │   ├── index.html
 │   ├── css/
 │   │   ├── variables.css
@@ -276,17 +253,17 @@ SafePoint-KBB/
 │   │   ├── components.css
 │   │   └── main.css
 │   └── js/
-│       ├── app.js                     # Uygulama orkestrasyonu
+│       ├── app.js                   # Application orchestration
 │       ├── config/constants.js
-│       ├── utils/                     # geo, dom, date, areaCoordinates
-│       ├── services/                  # api, earthquakeService
-│       ├── ui/                        # assemblyPanel, earthquakePanel
+│       ├── utils/                   # geo, dom, date, areaCoordinates
+│       ├── services/                # api, earthquakeService
+│       ├── ui/                      # assemblyPanel, earthquakePanel
 │       └── map/mapController.js
 │
 ├── data/
-│   ├── acil-toplanma-alanlari.json      # 496 AFAD toplanma alanı
-│   ├── kocaeli-csbm-hierarchy.json      # NVI CSBM: 25.363 sokak
-│   └── kocaeli-street-coordinates.json  # Sokak koordinat önbelleği
+│   ├── acil-toplanma-alanlari.json  # 496 AFAD assembly areas
+│   ├── kocaeli-csbm-hierarchy.json  # NVI CSBM: 25,363 streets
+│   └── kocaeli-street-coordinates.json  # Street coordinate cache
 │
 ├── docs/
 │   ├── API.md
@@ -304,73 +281,50 @@ SafePoint-KBB/
     └── e2e-user-flow.mjs
 ```
 
-## Testler
+## Tests
 
 ```bash
-# Birim testleri
+# Unit tests
 npm test
 
-# Uçtan uca kullanıcı akışı testi (sunucu çalışırken)
+# End-to-end user flow test (while server is running)
 npm run test:e2e
 ```
 
-Test kapsamı:
+Test coverage:
 
-- Haversine mesafe hesaplama doğruluğu
-- Koordinat doğrulama ve düzeltme
-- Yaklaşık toplanma alanı koordinat üretimi
-- Manuel konum seçimi, yakın alan listeleme, deprem modalı ve veri yenileme
+- Haversine distance calculation accuracy
+- Coordinate verification and correction
+- Approximate assembly area coordinate generation
+- Manual location selection, listing nearby areas, earthquake modal, and data refreshing
 
-## Dokümantasyon
+## Documentation
 
-| Belge | İçerik |
+| Document | Content |
 |-------|--------|
-| [API Dokümantasyonu](docs/API.md) | REST endpoint'leri ve dış API'ler |
-| [Mimari Dokümantasyon](docs/ARCHITECTURE.md) | Sistem mimarisi ve veri akışı |
+| [API Documentation](docs/API.md) | REST endpoints and external APIs |
+| [Architecture Documentation](docs/ARCHITECTURE.md) | System architecture and data flow |
 
-## Bilinen Sınırlamalar
+## Known Limitations
 
-| Konu | Açıklama |
+| Issue | Description |
 |------|----------|
-| **Resmi uyarı** | Uygulama bilgilendirme amaçlıdır; resmi afet bildirimleri için AFAD ve belediye kanallarını takip edin. |
-| **Toplanma alanı koordinatları** | AFAD verisinde birçok alanın `geometry` alanı boştur; haritada yaklaşık konum kullanılır. |
-| **Sokak koordinat kapsamı** | 25.363 sokaktan bir kısmı önbellekte; kalanlar ilk seçimde Nominatim ile çözümlenir (1 sn/istek). |
-| **Geocode doğruluğu** | OSM/Nominatim verisi sokak düzeyinde yaklaşık olabilir; bina numarası içermez. |
-| **Deprem verisi** | Üçüncü taraf Kandilli API'sine bağlıdır; kesinti durumunda panel uyarı gösterir. |
+| **Official warning** | The application is for informational purposes; follow AFAD and municipal channels for official disaster notifications. |
+| **Assembly area coordinates** | The `geometry` field of many areas in the AFAD data is empty; approximate locations are used on the map. |
+| **Street coordinate coverage** | A portion of the 25,363 streets is in the cache; the rest are resolved live with Nominatim on the first selection (1 sec/request). |
+| **Geocode accuracy** | OSM/Nominatim data may be approximate at the street level; it does not include building numbers. |
+| **Earthquake data** | Depends on the third-party Kandilli API; in case of an outage, the panel displays a warning. |
 
-## Geliştirme Önerileri
 
-- [ ] AFAD'dan resmi toplanma alanı koordinatları gelince yaklaşık konumları kaldırma
-- [ ] Kalan sokak koordinatlarını `npm run geocode:streets` ile toplu tamamlama
-- [ ] Geolocation API'yi isteğe bağlı alternatif konum kaynağı olarak ekleme
-- [ ] Production ortamında CORS ve rate limit sıkılaştırması
-- [ ] PWA desteği ve çevrimdışı harita önbelleği
-- [ ] Docker ile tek komutlu dağıtım
 
-## Katkıda Bulunanlar
+## License
 
-<table>
-  <tr>
-    <td align="center">
-      <img src="logo.png" width="80" alt="Zeynep Zehra Kocatürk"><br>
-      <strong>Zeynep Zehra Kocatürk</strong><br>
-      <sub>Stajyer — Bilgisayar Mühendisliği<br>KSTÜ · 230501017</sub>
-    </td>
-  </tr>
-</table>
-
-**Staj danışmanı:** Eşref Manav — Kocaeli Büyükşehir Belediyesi, Yazılım Geliştirme Şube Müdürlüğü
-
-## Lisans
-
-Bu proje [MIT Lisansı](LICENSE) altında lisanslanmıştır.
+This project is licensed under the [MIT License](LICENSE).
 
 ---
 
 <div align="center">
 
-**Kocaeli Büyükşehir Belediyesi · Yazılım Geliştirme Şube Müdürlüğü**
-
-*Mesleki Uygulama Projesi — 2025*
+*Professional Practice Project — 2025*
 
 </div>
